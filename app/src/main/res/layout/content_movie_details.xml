@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".screen.details.MovieDetailsActivity"
+    tools:showIn="@layout/activity_movie_details">
+
+    <RelativeLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/cream_background">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:textSize="@dimen/title_text_size"
+            android:textColor="@color/textColorPrimary"
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:id="@+id/overview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:textSize="@dimen/description_text_size"
+            android:textColor="@color/textColorSecondary"
+            android:layout_below="@+id/title"/>
+
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:textSize="@dimen/info_text_size"
+            android:textColor="@color/textColorPrimary"
+            android:drawableEnd="@drawable/ic_star_amber_24dp"
+            android:drawablePadding="8dp"
+            android:layout_below="@+id/overview"/>
+
+        <TextView
+            android:id="@+id/trailersTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:textSize="@dimen/info_text_size"
+            android:textColor="@color/textColorPrimary"
+            android:text="@string/trailers_title"
+            android:layout_below="@+id/rating"/>
+
+        <LinearLayout
+            android:id="@+id/trailersLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_below="@+id/trailersTitle"/>
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_below="@+id/trailersLayout"/>
+
+        <TextView
+            android:id="@+id/reviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reviews_title"
+            android:textSize="@dimen/info_text_size"
+            android:textColor="@color/textColorPrimary"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_below="@+id/webView"/>
+
+        <LinearLayout
+            android:id="@+id/reviewsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_below="@+id/reviews"/>
+
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>
